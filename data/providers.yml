@@ -1,0 +1,110 @@
+zen.spamhaus.org:
+  public: true
+  responses:
+    127.0.0.2:
+      description: "Spamhaus SBL Data, Static UBE sources, verified spam services (hosting or support) and ROKSO spammers"
+      score: Spam:25
+    127.0.0.3:
+      description: "Spamhaus SBL CSS Data, Static UBE sources, verified spam services (hosting or support) and ROKSO spammers"
+      score: Spam:25
+    127.0.0.4:
+      description: "CBL Data, Illegal 3rd party exploits, including proxies, worms and trojan exploits"
+      score: Compromised:25
+    127.0.0.5:
+      description: "Illegal 3rd party exploits, including proxies, worms and trojan exploits"
+      score: Compromised:25
+    127.0.0.6:
+      description: "Illegal 3rd party exploits, including proxies, worms and trojan exploits"
+      score: Compromised:25
+    127.0.0.7:
+      description: "Illegal 3rd party exploits, including proxies, worms and trojan exploits"
+      score: Compromised:25
+    127.0.0.10:
+      description: "End-user Non-MTA IP addresses set by ISP outbound mail policy"
+      score: DynamicIP:-100
+    127.0.0.11:
+      description: "End-user Non-MTA IP addresses set by ISP outbound mail policy"
+      score: DynamicIP:-100
+
+dnsbl.sorbs.net:
+  public: true
+  responses:
+    127.0.0.2:
+      description: "List of Open HTTP Proxy Servers"
+      score: OpenProxy:25
+    127.0.0.3:
+      description: "List of Open SOCKS Proxy Server"
+      score: OpenProxy:25
+    127.0.0.4:
+      description: "List of open Proxy Servers not listed in the SOCKS or HTTP lists"
+      score: OpenProxy:25
+    127.0.0.5:
+      description: "List of Open SMTP relay servers"
+      score: OpenSMTP
+    127.0.0.6:
+      description: "List of hosts that have been noted as sending spam/UCE/UBE to the admins of SORBS within the last 48 hours."
+      score: OpenProxy
+    127.0.0.7:
+      description: "List of web (WWW) servers which have spammer abusable vulnerabilities (e.g. FormMail scripts) Note: This zone now includes non-webserver IP addresses that have abusable vulnerabilities."
+      score: Exploit
+    127.0.0.8:
+      description: "List of hosts demanding that they never be tested by SORBS"
+      score: None
+    127.0.0.9:
+      description: "List of networks hijacked from their original owners, some of which have already used for spamming"
+      score: Exploit
+    127.0.0.10:
+      description: "Dynamic IP Address ranges (NOT a Dial Up list!)"
+      score: None
+    127.0.0.11:
+      description: "List of domain names where the A or MX records point to bad address space"
+      score: None
+    127.0.0.12:
+      description: "List of domain names where the owners have indicated no email should ever originate from these domains"
+      score: None
+    127.0.0.14:
+      description: "IP addresses and Netblocks of where system administrators and ISPs owning the network have indicated that servers should not be present"
+      score: None
+
+all.spamrats.com:
+  public: true
+  responses: 
+    127.0.0.36:
+      description: "Dyna, IP Addresses that have been found sending an abusive amount of connections, or trying too many invalid users at ISP and Telco's mail servers, and are also known to conform to a naming convention that is indicative of a home connection or dynamic address space"
+      score: None
+    127.0.0.37: 
+      description: "Noptr, IP Addresses that have been found sending an abusive amount of connections, or trying too many invalid users at ISP and Telco's mail servers, and are also known to have no reverse DNS, a technique often used by bots and spammers"
+      socore: Spam
+    127.0.0.38:
+      description: "Spam, IP Addresses that do not conform to more commonly known threats, and is usually because of compromised servers, hosts, or open relays. However, since there is little accompanying data this list COULD have false-positives, and we suggest that it only is used if you support a more aggressive stance"
+      score: Spam
+
+hostkarma.junkemailfilter.com:
+  public: true
+  responses:
+    127.0.0.1:
+      description: "whitelist - trusted nonspam"
+      score: None
+    127.0.0.2: 
+      description: "blacklist - block spam"
+      score: None
+    127.0.0.3: 
+      description: "yellowlist - mix of spam and nonspam"
+      score: None
+    127.0.0.4: 
+      description: "brownlist - all spam - but not yet enough to blacklist"
+      score: None
+    127.0.0.5:
+      description: "no blacklist - This IP is not a spam only source and no blacklists need to be tested"
+      score: None
+
+bad.psky.me:
+  public: true
+  responses:
+    127.0.0.2:
+      description: "The IP address in question has been seen with a high rate of spam"
+      score: Spam:25
+    127.0.0.3:
+      description: "The IP address in question has been seen to have a very high rate of spam"
+      score: Spam:100
+
